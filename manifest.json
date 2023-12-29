@@ -1,0 +1,22 @@
+
+
+{
+    "manifest_version": 3,
+    "name": "Text Extraction Extension",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html"
+    }
+  }
+  
