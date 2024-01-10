@@ -147,10 +147,14 @@ footer {
     font-size: 1.3rem;
     padding-top: 10px;
 }
-#submain1
+#response
 {
     font-size: 1.2rem;
 
+}
+#urlDisplay
+{
+    font-size: 1.2rem;
 }
 
 #extractButton

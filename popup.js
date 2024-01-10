@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function sendURLToServer(url) {
         // Replace 'http://localhost:8000' with the actual URL of your FastAPI server
-        var serverURL = 'http://192.168.13.25:8000/upload'; 
+        var serverURL = 'http://192.168.105.24:8000/upload'; 
        
         fetch(serverURL, {
           method: 'POST',
