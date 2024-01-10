@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+
+#main {
+    text-align: center;
+    padding: 20px;
+}
+
+#submain {
+    margin: auto;
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.switch-label {
+    margin-right: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    height: 34px;
+    width: 60px;
+    background-color: #ccc;
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+#detect {
+    margin-bottom: 20px;
+}
+
+#refeed {
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+#report{
+    background-color: #f32121;
+    border: none;
+    font-size: 0.8rem;
+    color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#report:hover{
+    background-color: #ff4352;
+}
+#feedback{
+    background-color: rgb(13, 124, 78);
+    border: none;
+    font-size: 0.8rem;
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#feedback:hover{
+    background-color: rgb(18, 160, 101);
+}
+#tech
+{
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 1.2rem;
+
+
+}
+#span{
+    margin-right: 22px;
+}
+
+#sen{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+#p{
+    color: yellow;
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+#submain1
+{
+    font-size: 1.2rem;
+
+}
+
+#extractButton
+{
+    border: none;
+    background-color: rgb(57, 57, 57);
+    color: white;
+    border-radius: 20px;
+    padding: 15px 25px;
+    cursor: pointer;
+
+}
+
+#button:hover{
+    background-color: #4a4a4a;
+}

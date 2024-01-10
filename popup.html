@@ -1,5 +1,5 @@
 <!-- popup.html -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>URL Extractor</title>
@@ -74,4 +74,58 @@
       </div>
     </div>
   </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="width: 500px;">
+    <header>
+        
+        <h3 id="myh3">DARK PATTERN</h3>
+    </header>
+    <div id="main">
+        <div id="submain">
+            <p id="sen">DETECT DARK PATTERN ON</p><br>
+            <label class="switch"  id="domainSwitch">
+                <span class="switch-label">This domain</span>
+                <input type="checkbox" name="domainSwitch">
+                <span class="slider round"></span>
+              </label><br>
+              <label class="switch" id="pageSwitch">
+                <span class="switch-label"><span id="span">This page</span></span>
+                <input type="checkbox" name="pageSwitch">
+                <span class="slider round"></span>
+              </label><br>
+        </div>
+        <div id="detect">
+        
+          
+            <button id="extractButton" ><i class="fa fa-search"></i> Find 
+            </button>
+            <p id="submain1">Founded Dark Pattern on</p>
+        </div>
+        <div>
+          <p id="urlDisplay" style="font-family: sans-serif; margin-top: 8px;"></p>
+          <p id="response" style="font-family: sans-serif; margin-top: 8px;"></p>
+        </div>
+        <div id="refeed">
+            <button id="report">Report !</button>
+            <button id="feedback">Feedback</button>
+        </div>
+        
+    </div>
+    <footer id="profition">
+        <p id="pro">Developed by<span id="tech"><span id="p">P</span>rofilio <span id="p">T</span>echnologies</span></p>
+    </footer>
+    <script src="index.js"></script>
+</body>
 </html>
