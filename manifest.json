@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "URL Extractor",
+  "name": "Dark Pattern Finder",
   "version": "1.0",
-  "description": "Extracts the URL of the current tab",
+  "description": "Extracts the Dark Pattern of the current tab",
   "permissions": [
     "activeTab"
   ],
