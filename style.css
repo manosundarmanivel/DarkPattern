@@ -154,7 +154,7 @@ footer {
 }
 #urlDisplay
 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 #extractButton
@@ -167,6 +167,91 @@ footer {
     cursor: pointer;
 
 }
+
+#main1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    
+
+}
+#myh4{
+    font-size: 1.3rem;
+
+}
+
+#url{
+   
+    font-size: 1.1rem;
+}
+
+#myh5{
+    font-size: 1.3rem;
+}
+
+#des{
+
+    font-size: 1.2rem;
+    height: 80px;
+
+}
+#btn {
+    width: 80px;
+    padding:10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btn:hover {
+    background-color: #45a049;
+}
+
+#comments {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 260px;
+    font-weight: bold;
+    
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.star {
+    font-size: 6vh;
+    cursor: pointer;
+  }
+   
+  .one {
+    color: rgb(255, 0, 0);
+  }
+   
+  .two {
+    color: rgb(255, 106, 0);
+  }
+   
+  .three {
+    color: rgb(251, 255, 120);
+  }
+   
+  .four {
+    color: rgb(255, 255, 0);
+  }
+   
+  .five {
+    color: rgb(24, 159, 14);
+  }
 
 
 
