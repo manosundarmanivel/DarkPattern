@@ -19,20 +19,21 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       console.error("Element with ID 'extractButton' not found");
     }
-  
+
+    
     function displayURL(url) {
       var urlDisplay = document.getElementById('urlDisplay');
       
       if (urlDisplay) {
         console.log('Displaying URL:', url);
-        urlDisplay.textContent = "Current Tab URL: " + url;
+        urlDisplay.textContent = "Finding Dark Pattern In: " + url;
       } else {
         console.error("Element with ID 'urlDisplay' not found");
       }
     }
     function sendURLToServer(url) {
         // Replace 'http://localhost:8000' with the actual URL of your FastAPI server
-        var serverURL = 'http://192.168.105.25:8000/upload'; 
+        var serverURL = 'http://192.168.77.24:8000/process_url/'; 
        
         fetch(serverURL, {
           method: 'POST',
@@ -44,10 +45,17 @@ document.addEventListener('DOMContentLoaded', function () {
           .then(response => response.json())
           .then(data => {
             console.log('Server response:', data);
-            if(data["model_output"]==1)
-            document.getElementById("response").textContent = "Dark Pattern Found";
-            else
-            document.getElementById("response").textContent = "Dark Pattern Not Found";
+            chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+              // Example list of data to send
+              
+              var currentTabId = tabs[0].id;
+              console.log(currentTabId);
+              // Send a message to the content script along with the list
+              chrome.tabs.sendMessage(currentTabId, { action: 'modifyContent', dataList: data });
+              console.log('Message sent to content script');
+
+            });
+          
             // You can handle the server response as needed
           })
           .catch(error => {
@@ -55,14 +63,3 @@ document.addEventListener('DOMContentLoaded', function () {
           });
       }
   });
-
-
-  document.getElementById('report').addEventListener('click', function() {
-    window.location.href = 'report.html';
-});
-
-//route to feedback page when clicked on the feebback button
-
-document.getElementById('feedback').addEventListener('click', function(){
-  window.location.href='feedback.html';
-})

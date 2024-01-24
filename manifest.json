@@ -1,16 +1,29 @@
 {
   "manifest_version": 3,
-  "name": "Dark Pattern Finder",
+  "name": "DP Finder",
   "version": "1.0",
-  "description": "Extracts the Dark Pattern of the current tab",
-  "permissions": [
-    "activeTab"
-  ],
+  "description": "Modify webpage content",
+  "permissions": ["activeTab"],
   "action": {
     "default_icon": "logo.png",
+    "default_title": "Click to modify content",
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
   "icons": {
-    "48": "logo.png"
-  }
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["logo.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
